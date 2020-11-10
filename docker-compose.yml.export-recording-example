@@ -9,7 +9,7 @@ services:
       - AUTH=mZFZN4yc
       - COPY_TO_PATH=/var/www/bigbluebutton-default/record
       - PLAYBACK_FILE=playback.html
-      - EXPORT_RECORDING_URL="https://bbbserver.com/bigbluebutton/api/playback/presentation/2.0/playback.html?meetingId=0cfe405d51dugd575f9c00jug8c125e4deed8e035-1606763109777" RecordingName.webm 0 true
+      - EXPORT_RECORDING_URL=https://bbbserver.com/bigbluebutton/api/playback/presentation/2.0/playback.html?meetingId=0cfe405d51dugd575f9c00jug8c125e4deed8e035-1606763109777 RecordingName.webm 0 true
     command: /bin/sh start_export.sh
     volumes:
-      - ./videodata:/video
+      - /var/www/bigbluebutton-default/record:/var/www/bigbluebutton-default/record
